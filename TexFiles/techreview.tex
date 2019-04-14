@@ -3,16 +3,9 @@
 \chapter{Technology Review}
 About seven to ten pages.
 
-\section {Unity 3D}
-Unity 3D is a a game development environment created by David Helgason who setup Unity Technologies. 59\% of all virtual reality games are made using the Unity 3D engine. Unity works on 30 platforms, including Windows, iOS, Android, Nintendo Switch, Playstation 4, Oculus Rift, etc. Unity competes with Epic’s Unreal Engine, the game engine behind Fortnite and many games on the PS4 and Xbox One. 50\% of all games are made using Unity 3D. 50\% of all games are made using Unity 3D. As we are making a virtual reality game, the two engines we could use are the Unity 3D engine or the Unreal 4 engine. Though the Unreal engine creates very beautiful games and is very well optimised, the programming language is C++. We simply haven't used C++ yet and starting a new language would make the process more complex. The Unity engine used the C# language, which we have used previously.
+\input{TexFiles/unity.tex}
 
-\section {Unity UNET}
-UNet is a feature in Unity that allows the programmer to create multiplayer or networked games over a network. It accomplishes this by allowing one player or service act as a host or dedicated host. A standard host is also a client, a dedicated host is just a server and does not have a client connection. Each client sends data to the host and receives all data from the host instead of communicating with the other clients. UNet as of 2018 is deprecated and is planned to be replaced, although there is no information yet on its replacement. Part of the reason for UNet being replaced is due to data being sent from client to server, then to all other clients has a latency issue as expected due to the path the data uses, as latency is usually the amount of time it takes for data to travel from client to server and back. This can be seen even in our program, when a player jumps their character, the players character can be seen stuttering but doesn't have such a noticeable effect when the character is not jumping.
-
-\section {Oculus Rift}
-The Virtual Reality headset we used for our project is an Oculus Rift, this is one of the top head mounted displays on the market. Along with the Rift, Oculus has also released two development kits before releasing the rift. They have released a mobile VR kit known as the Oculus Go. In spring 2019 Oculus will also release two more units, one known as the Rift S that will be similar to the Rift and one other unit known as the Oculus quest, which will be a stand alone unit that will not require a computer to operate. \newline
-
-The Rift connects to a gaming graphics card with a HDMI port and a USB 3.0 connection for the head mounted display. The headset comes with two touch controllers and two external sensors that also each require a USB 3.0 connection. Due to the occlusion that occurs when using only two sensors, a third sensor is recommended for a much smoother experience. The position of the controllers and the headset in 3D space is captured using the external sensors.
+\input{TexFiles/VirtualReality.tex}
 
 \section {Java}
 \section {Go Lang}
