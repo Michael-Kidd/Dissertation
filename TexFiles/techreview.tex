@@ -8,10 +8,73 @@ About seven to ten pages.
 \input{TexFiles/VirtualReality.tex}
 
 \section {Java}
+Java is a high-level programming language developed by Sun Microsystems. It was originally designed for developing programs for set-top boxes and handheld devices, but later became a popular choice for creating web applications. The syntax is similar to that of C++ but it is strictly an object orientated programming language. Java programs contain classes and methods. Classes are used to define objects and methods are assigned to individual classes.\newline
+
+Java is also known for being more strict than C++, meaning variables and functions must be explicitly defined. This means Java source code may produce errors or "exceptions" more easily than other languages, but it also limits other types of errors that may be caused by undefined variables or unassigned types.\newline
+
+Java programs are not run directly by the operating system. Instead, Java programs are interpreted by the JVM, Java Virtual Machine, which can be run on multiple platforms. This means all Java programs can be run on different platforms such as Mac, Windows and Unix computers.  In order for Java applications or applets to run at all the JVM must be installed.\newline
+
 \section {Go Lang}
+Go Lang was conceived by Robert Griesemer, Rob Pike and Ken Thompson when they started sketching the goals for a new language on a white board on September 21, 2007. By January 2008, Ken Thompson had started working on a compiler with which to explore ideas. The compiler generated C code as its output. By mid 2008 the language had become a full-time project and had settled enough to attempt a production compiler. Go became a public open source project on November 10, 2009. There are now millions of Go programmers, or gophers, around the world. Go's success has far exceeded all expectations.\newline
+
+At the time of Go's inception, only a decade ago, the programming world was different from today. Production software was usually written in C++ or Java, GitHub did not exist, most computers were not yet multiprocessors, and other than Visual Studio and Eclipse there were few IDEs or other high-level tools available at all, let alone for free on the Internet. Throughout its design, Google have tried to reduce clutter and complexity. There are no forward declarations and no header files; everything is declared exactly once.\newline
+
+
 \section {Python}
+The Python programming language was created by dutch programmer Guido Van Rossum who started developing the new script in the late 1980s and finally introduced the first version of that programming language in 1991.\newline
+
+Here are some of the principles that python is based on:\newline
+Beautiful is better than ugly\newline
+Simple is better than complex\newline
+Complex is better than complicated\newline
+Readability counts\newline
+In the face of ambiguity, refuse the temptation to guess\newline
+There should be one, and preferably only one, obvious way to do it\newline
+If the implementation is hard to explain, it’s a bad idea\newline
+
+Often people assume that the name Python was written after a snake. Even the logo of Python programming language depicts the picture of two snakes, blue and yellow.  But, the story behind the naming is somewhat different. Back in the 1970s, there was a popular BBC comedy tv show called Monty Python’s Fly Circus and Van Rossum happened to be the big fan of that show. So when Python was developed, Rossum named the project ‘Python’.\newline
 \section {MongoDB}
+Mongodb is an open source non relational database management system. MongoDB was created by Dwight Merriman and Eliot Horowitz, who had encountered development and scalability issues with traditional relational database approaches while building web applications at DoubleClick, an online advertising company that is now owned by Google Inc. The name of the database was derived from the word humongous to represent the idea of supporting large amounts of data.\newline
+
+MongoDB uses collections and documents unlike relational databases that use tables and rows. A record in MongoDB is a document that contains a data structure made up of field and value pairs. MongoDB documents use a varient similar to JavaScript Object Notation (JSON) called Binary JSON known as BSON that allows for more data types. The fields in the documents are similar to columns in a relational databse and they can hold a large variety of data including other documents to arrays of documents.\newline
+
+Documents in MongoDB must use a primary key as a unique identifier.
+The (id field) is added by MongoDB to uniquely identify the document in the collection i.e.(id, Name, Address) id is the object id/primary key. Collections contain sets of documents and act as the equivalent of tables in a relational database.\newline
+
+MongoDB doesn't require predefined schemas and it stores any type of data. Tihs provides scalability and felxibility compared to relational databases which makes it a useful database for companies running big data applications. One of the advantages of using documents is that these objects map to native data types in a number of programming languages. Also, having embedded documents reduces the need for database joins.\newline
+
+MongoDB is available in community and commercial versions through vendor MongoDB Inc. MongoDB Community Edition is the open source release, while MongoDB Enterprise Server brings added security features.\newline
+
 \section {Redis DB}
+Redis (REmote DIctionary Server) is an open source (BSD licensed), in-memory data structure store, used as a database. It supports a large variety of different types of data that can be stored ranging from strings and lists to hashes and sorted sets.Redis allows you to run atomic operations on these types, like appending a string; incrementing the value in a hash; pushing an element to a list; computing set intersection, union and difference; or getting the member with highest ranking in a sorted set.
+\newline
+
+Key features of redis are:\newline
+High-Level Data Structures:  Provides five possible data types for values: strings, lists, sets, hashes, and sorted sets. Operations that are unique to those data types are provided and come with well documented time-complexity (Big O notation).\newline
+
+High Performance:  Due to its in-memory nature, the project maintainer’s commitment to keeping complexity at a minimum, and an event-based programming model, Redis boasts exceptional performance for read and write operations.\newline
+
+Lightweight With No Dependencies:  Written in ANSI C, and has no external dependencies. Works well in all POSIX environments. Windows is not officially supported, but an experimental build is provided by Microsoft.\newline
+
+High Availability:  Built-in support for asynchronous, non-blocking, master/slave replication to ensure high availability of data. There is currently a high-availability solution called Redis Sentinel that is currently usable, but is still considered to be a work in progress.\newline
+
 \section {MariaDB}
-\section {Amazon Web Services}
+MariaDB is an open source relational database management system (DBMS). MariaDB is the compatible drop-in replacement for the widely used MySQL database technology. MariaDB intends to have high compatibility with MySQL and exact matching with MySQL APIs and commands. MariaDB's API and protocol are compatible with those used by MySQL, and also some other features to support local non-blocking operations and progress reporting.\newline
+
+MariaDB is developing continuously and any new updates are transmitted to end users very fast with updated features like bug tracking that can be viewed in detail. They also offer a cluster database intended for commercial use that enables multi-master replication.\newline
+
+MARIADB VS MYSQL\newline
+MariaDB has better query performance.\newline
+MariaDB has more an open source attitude.\newline
+Switching to MariaDB is very easy.\newline
+Galera implementation is better in MariaDB.\newline
+MariaDB is available as an option with some hosting environments, like RackSpace Cloud.\newline
+MariaDB comes by default with some distros, like the Red Hat series.\newline
+
+\section {AWS}
+Amazon Web Services (AWS), the pioneering cloud computing platform provided by Amazon.com, emerged from separate internal initiatives at Amazon over 16 years ago to both aid developers and also improve the efficiency of the company’s own infrastructure.\newline
+
+Publicly launched on March 19, 2006, AWS offered Simple Storage Service (S3) and Elastic Compute Cloud (EC2). By 2009, S3 and EC2 were launched in Europe, the Elastic Block Store (EBS) was made public, and a powerful content delivery network (CDN), Amazon CloudFront, all became formal parts of AWS offering. These developer-friendly services attracted cloud-ready customers and set the table for formalized partnerships with data-hungry enterprises such as Dropbox, Netflix, and Reddit, all before 2010.\newline
+
 \section {Docker}
+Docker is an open platform for developing, shipping, and running applications. Docker enables you to separate your applications from your infrastructure so you can deliver software quickly. With Docker, you can manage your infrastructure in the same ways you manage your applications. Docker provides the ability to package and run an application in a loosely isolated environment called a container. The isolation and security allow you to run many containers simultaneously on a given host. Containers are lightweight because they don’t need the extra load of a hypervisor, but run directly within the host machine’s kernel. This means you can run more containers on a given hardware combination than if you were using virtual machines. You can even run Docker containers within host machines that are actually virtual machines.
