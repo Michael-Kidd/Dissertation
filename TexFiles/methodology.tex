@@ -34,12 +34,21 @@ The game Itself:
 
 \includegraphics[width=1\columnwidth]{img/Overview.PNG}
 \subsection {Overview}
-The design stage is a critical and vital part of a software development project. Without first setting out goals and deliverables, a project can quickly lose it way. Design and modelling have been used in various projects dating back to the Ancient Egyptians and Romans and has been used many civilisations since. This process is widely used in science and engineering to give a high-level view of the system.
-The first stage is to create a design document and a model of the intended project. This document is a detailed layout of the system used to give an overall guide to the architecture of the project. It should include attributes and relationships between data and their structures along with architectural, interface and procedural designs.
+The design stage is a critical and vital part of a software development project. Without first setting out goals and deliverance's, a project can quickly lose it way. Design and modelling have been used in various projects dating back to the Ancient Egyptians and Romans and has been used many civilization's since. This process is widely used in science and engineering to give a high-level view of the system.
+\newline
+
+The first stage is to create a design document and a model of the intended project. This document is a detailed layout of the system used to give an overall guide to the architecture of the project.
+It should include attributes and relationships between data and their structures along with architectural, interface and procedural designs.
+\newline
 
 The next stage is to design a model of the project. This model is then used to obtain a better understanding of the system and is referenced to help understand the flow of data the various steps that take place throughout the project. 
+\cite {36160220110101}
+\bibliographystyle{plain}
 
-The next stage of design is the analysis stage. This part of the process is about analysing the performance of the various stages of the software and its requirement and limitations. This is a vital part of the process and extremely relevant to our project as there was many different technologies and programming languages used. With these factors researched and discussed, we began the task of designing our project.
+The next stage of design is the analysis stage. This part of the process is about analyzing the performance of the various stages of the software and its requirement and limitations. This is a vital part of the process and extremely relevant to our project as there was many different technologies and programming languages used. With these factors researched and discussed, we began the task of designing our project.
+\newline
+
+\includegraphics[width=1\columnwidth]{img/breakdown.PNG}
 
 \subsection {The Game}
 During the design stage, we had to map out the system and decide on which elements were needed and how they could be implemented. From the very start we knew that the game itself must be implemented in either Unity with C\# or using the Unreal 4 engine with C++. Our knowledge and experience of the unreal engine and with any of the C\p\p language is very limited, were as we already have a working knowledge of unity and C\#. So we went with Unity. Using any form of third gaming engine would not be practical as the libraries for the virtual reality devices have been focuses on these two implementations.\newline
@@ -52,33 +61,123 @@ Development of the login system started with creating two java programs that use
 
 Before development went any further a decision was made to use MongoDB as our database for the user login. The installation of MongoDB involved logging into the AWS virtual machine we are using for our project. For this project we decided to use the free version of MongoDB known as the community version using the current stable release (4.0.3) (MSI).\newline
 
-To install mongo:\newline
-•	Click on the file just downloaded which opens the installer.\newline
-•	Click Next.\newline
-•	Accept Terms & Conditions and click Next.\newline
-•	Choose Complete Setup.\newline
-•	Click Install.\newline
-•	Click Finish.\newline
+Once the two java programs were up and running a number of basic tests were performed to verify the programs were working correctly by sending and receiving basic information across the connection. The next step was to take the existing program and use it to receive a connection from the unity game scene in the user login details page. This required making major modifications to the existing java programs.\newline
 
+For this project our database is called usersdb and our collection is called users. Once the database was set up and installed we got to work on the two java programs. After the java programs were up and running we performed a number of basic tests to verify the programs were working correctly by sending and receiving basic information across the connection. The next step was to take the existing program and use it to receive a connection from the unity game scene in the user login details page. This required making major modifications to the existing java programs.\newline
 
-our login system
+The modifications involved creating several new java programs to receive a connection from the server and connect to the database. Then we created a user object in the java program that consisted of a username and password. We created an interface called database connection that contains the methods to add users, find users and verify passwords.\newline
 
-\includegraphics[width=1\columnwidth]{img/breakdown.PNG}
+This involved making a connection using a C\# login script in visual studio, through sockets, on port numbers 5000 and 5001. The login details page in the unity project required a username and password. The username and password are represented using strings in C\#. The username and password are game objects in unity that allow a user to type the details into input fields. In unity every object in a game is represented as a game object. Game objects vary from game characters to collectable items or text fields that exist in a game scene in unity.\newline
 
+Once the C\# script was set up to make a connection through the port numbers and connected to the java application on the virtual machine it was time to connect to the database. A connection to the MongoDB is made using the java application. This allows users to create a new account for login purposes using a valid username, must be unique and not already exist in the database, and create a password that must be eight characters or more. The users information is then stored in memory in C\#.\newline
+
+This users information that has been sent to the MongoDB where it either creates a new valid user or finds an existing user in the database is validated and the username is then sent to the matchmaker and scoreboard scenes.\newline
+\cite{S073658531830140020180801}
+\bibliographystyle{plain}
+
+\includegraphics[width=1\columnwidth]{img/LoginSystem.PNG}
+Overview of Log-in System
+
+\subsection {Match Maker}\newline
 Our match making system
+The match making system allows users the option to either host a game or find a game to join. Hosting a game means the user is hosting a game on his own network/machine. Joining a game simply allows you to join a game that is being hosted by someone else.\newline
 
+The user name that has been stored in memory in C\# is sent to the match maker. If the user chooses to host a game his username and IP address is sent to the redis database. The username and IP address is then stored in a struct and added to a list of users who want to host a game. The username is then sent back to the match maker screen and a join button appears next to his name. Once other users decide to join the game the users are redirected to the game lobby screen and wait for all users interested in playing, for a limited amount of time, to join and then are brought to play the game.\newline
+
+If the user decides he does not want to host a game he clicks on the find game button which sends a request to the redis database that sends back a list of users who are hosting a game. The user then clicks the join button next to the hosts name. The user then gets redirected to the game lobby where he waits for others to join the game then he is brought to play the game. 
 \includegraphics[width=1\columnwidth]{img/redisMatch.PNG}
 
-An overview of the game
+Overview of Match Maker System
+\subsection {Score Board}
 
-\includegraphics[width=1\columnwidth]{img/MariaDBPic.PNG}
+\newline
 
-An overview of our scoreboard system
+The scoreboard will be the last window the user will interact with. Once the race has ended, the game sends a list of the player objects containing the player username and the points the player received for their position in the race. Once the list is received, a loop runs through the objects and the player name and points received are printed to screen using GUI text field in Unity.
+\newline
 
-\includegraphics[width=1\columnwidth]{img/MariaDBPic.PNG}
+Next the program will serialize the list as XML for the purpose of sending to the MariaDB database running on the Virtual machine. Before this is done the object must be tagged with the Serializable attribute. It then creates an XML document and declaration and a loop sends the object to the XML file. (The file is not actual created; the XML is saved to a variable). This is done using the XMLSerializer class.
+\cite {93513120150101}
+\bibliographystyle{plain}
+\newline
+
+The program then makes use of the TCP Client class in C\#. The program makes a connection to a socket listening on the virtual machine. Once the connection is made the variable containing the XML is passed to a byte array which is sent using the Network Stream class. This is done by reading the data in and using the write method in the Network Stream class.
+\cite {27494020090101}
+\bibliographystyle{plain}
+\newline
+
+The python program on the virtual machine then receives the XML as a byte stream it decodes the bytes, then it converts them to string and using ElementTree converts them back into XML. It then passes the XML into a second python file called ScoreboardDB. There it takes the XML passed from the Client Connection file and passes UserName & Score in to two lists one called playerNames and the other called playerScore.
+\newline
+
+The program then connects to the MariaDB and runs a query to either add the player if they don't already exist or to update there score if they do exist. This is wrapped in a try/catch to bring up an error if for any reason the data cant be added to the database or if a connection the database can't be made.
+\newline
+
+After the database has been updated with the latest results the rankDB method is called and it assigns the players rank to a list called playerRank. There rank is based on there total score from all races to writeToXML  definition it adds the results to an XML file which is not an actual file but a BytesIO stream used so to add the XML header which can't be added in python with creating a file or a binary file stream as used here. This is then passed back to the ClientConnection file. Then on the same connection that the XML was received the updated XML is returned to the C# program.    
+\newline
+
+The next step in the program is to receive the updated XML using the StreamReader class, making use of the TCP getSteam method available in C#. This data is then read in and saved as XML file in order to deserialize back to an object. This is done by again using the XMLSerializer class, but this time using deserialise method. The file is opened using the FileStream class and a loop runs over the XML and deserialises the file back into a list of objects. This new and updated list is then rendered to screen using GUI text field in Unity.
+\newline
+
+\includegraphics[width=1\columnwidth]{img/scoreBoard.PNG}
+
+Overview of Score Board System
 
 \newpage
 \section{Implementation}
+To install MongoDB:
+\begin{itemize}
+\item Click on the file just downloaded which opens the installer.
+\item Click Next.
+\item Accept Terms and Conditions and click Next.
+\item Choose Complete Setup.
+\item Click Install.
+\item Click Finish.
+\end{itemize}
+\newline
+To setup MongoDB:
+\begin{itemize}
+\item Open the Windows cmd prompt and navigate to the following folder:
+\item	C: Program Files MongoDB Server 4.0.3 bin 
+\item Start the mongo daemon as follows:
+\item Mongod
+\item In a new Windows cmd prompt  navigate to the bin folder:
+ \item C: Program Files MongoDB Server 4.0.3 bin
+\item Start mongoDB by entering this command:
+\item	mongo
+\end{itemize}
+\newline
 
+To install RedisDB:
+\begin{itemize}
+\item 
+\item 
+\item 
+\item 
+\item 
+\item 
+\end{itemize}
+ \newline
+ 
+To install MariaDB:\newline
+\begin{itemize}
+\item Click on the downloaded file.
+\item The MariaDB setup wizard will launch, click next.
+\item Accept the License Agreement and click next.
+\item Here you can set your Root password and select to allow to access the database from remote machines.
+\item Click next on the default instance properties 
+\item Click install 
+\end{itemize}
+ \newline
+ 
+ To install HeidiSQL:\newline
+\begin{itemize}
+\item Run HeidiSQL
+\item Click the new button in session manager
+\item Select Network type MySql (TCP/IP)
+\item Set Hostname as 127.0.0.1
+\item Set User as root from MariaDB setup 
+\item Set Password as password from MariaDB setup 
+\item Set Port to 5004 
+\item Then click open
+\end{itemize}
 \newpage
 \section{Integration and System Testing}

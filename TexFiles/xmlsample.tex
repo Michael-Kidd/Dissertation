@@ -1,12 +1,19 @@
 %!TEX root = project.tex
 
 \section{XML}
+XML stands for eXtensible Markup Language and is used for storing information almost everywhere around the world. XML is independent of propriety software applications which means when you write in XML it can be passed around and used in a variety of computer systems. This allows for cross platform communication and data transference.\newline
+
+XML is structured in a tree format beginning with a (Parent) root element that branches to a (Child) element that can contain an attribute that branches to a (Sub-Child) element that can contain different information.\newline 
 Here's some nicely formatted XML
+
 \begin{verbatim}{xml}
-<this>
-  <looks lookswhat="good">
-    Good
-  </looks>
-</this>
+<bookstore>
+  <book category="cooking">
+    <title lang="en">Everyday Italian</title>
+    <author>Gino Di Campo</author>
+    <year>2015</year>
+    <price>20.00</price>
+  </book>
+</bookstore>
 \end{verbatim}
 
