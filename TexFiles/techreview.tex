@@ -1,7 +1,6 @@
 %!TEX root = project.tex
 
 \chapter{Technology Review}
-About seven to ten pages.
 
 \input{TexFiles/unity.tex}
 
@@ -10,19 +9,23 @@ About seven to ten pages.
 \section {Java}
 Java is a high-level programming language developed by Sun Microsystems. It was originally designed for developing programs for set-top boxes and handheld devices, but later became a popular choice for creating web applications. The syntax is similar to that of C++ but it is strictly an object orientated programming language. Java programs contain classes and methods. Classes are used to define objects and methods are assigned to individual classes.\newline
 
-Java is also known for being more strict than C++, meaning variables and functions must be explicitly defined. This means Java source code may produce errors or "exceptions" more easily than other languages, but it also limits other types of errors that may be caused by undefined variables or unassigned types.\newline
-
 Java programs are not run directly by the operating system. Instead, Java programs are interpreted by the JVM, Java Virtual Machine, which can be run on multiple platforms. This means all Java programs can be run on different platforms such as Mac, Windows and Unix computers.  In order for Java applications or applets to run at all the JVM must be installed.\newline
+
+\section {C\#}
+C\# is an object orientated programming language used for networking, web and game development. Dutch developer Anders Hejlsberg formed a team in 1999 during the development of the .NET framework to create a new C like Object Orientated Language (COOL).
+\newline
+
+C\# is used to develop robust applications through the .NET framework. C\# is a very similar language to java and C++ and generally developers who are familiar with java can adapt to C\# very quickly. C\# is the programming language used for game development in Unity.
+\newline
 
 \section {Go Lang}
 Go Lang was conceived by Robert Griesemer, Rob Pike and Ken Thompson when they started sketching the goals for a new language on a white board on September 21, 2007. By January 2008, Ken Thompson had started working on a compiler with which to explore ideas. The compiler generated C code as its output. By mid 2008 the language had become a full-time project and had settled enough to attempt a production compiler. Go became a public open source project on November 10, 2009. There are now millions of Go programmers, or gophers, around the world. Go's success has far exceeded all expectations.\newline
 
-At the time of Go's inception, only a decade ago, the programming world was different from today. Production software was usually written in C++ or Java, GitHub did not exist, most computers were not yet multiprocessors, and other than Visual Studio and Eclipse there were few IDEs or other high-level tools available at all, let alone for free on the Internet. Throughout its design, Google have tried to reduce clutter and complexity. There are no forward declarations and no header files; everything is declared exactly once.\newline
+At the time of Go's inception, only a decade ago, the programming world was very different from today. Production software was usually written in C++ or Java, GitHub did not even exist and most computers were not yet capable to run complex algorithms, and IDEs such as Visual Studio and Eclipse were the only real option. Throughout its design, Google have endeavoured to reduce clutter and complexity. There are no forward declarations and no header files as everything is declared exactly once. Go Lang is a relative new, yet popular language and seems to be on the rise in terms of application development.\newline
 
 
 \section {Python}
-The Python programming language was created by dutch programmer Guido Van Rossum who started developing the new script in the late 1980s and finally introduced the first version of that programming language in 1991.Today, it is developed by the Python Software Foundation. Python is a multi-paradigm language, Python programmers can accomplish their tasks using different styles of programming: object oriented, imperative, functional or reflective. \newline
-
+The Python programming language was created by dutch programmer Guido Van Rossum who started developing the new script in the late 1980s and finally introduced the first version of that programming language in 1991. Today, it is developed by the Python Software Foundation. Python is a multi-paradigm language, Python programmers can accomplish their tasks using different styles of programming: object oriented, imperative, functional or reflective. \newline
 
 Here are some of the principles that python is based on:\newline
 \begin{itemize}
@@ -34,7 +37,11 @@ Here are some of the principles that python is based on:\newline
 \item There should be one, and preferably only one, obvious way to do it
 \item If the implementation is hard to explain, it’s a bad idea
 \end{itemize}
-Often people assume that the name Python was written after a snake. Even the logo of Python programming language depicts the picture of two snakes, blue and yellow.  But, the story behind the naming is somewhat different. Back in the 1970s, there was a popular BBC comedy tv show called Monty Python’s Fly Circus and Van Rossum happened to be the big fan of that show. So when Python was developed, Rossum named the project ‘Python’.\newline
+\newline
+
+Python has seen somewhat of a resurgence in recent years as an effective programming language for machine learning and the development of neural networks as we recently discovered through our Emerging Technology module.
+\newline
+
 \section {MongoDB}
 Mongodb is an open source non relational database management system. MongoDB was created by Dwight Merriman and Eliot Horowitz, who had encountered development and scalability issues with traditional relational database approaches while building web applications at DoubleClick, an online advertising company that is now owned by Google Inc. The name of the database was derived from the word humongous to represent the idea of supporting large amounts of data.\newline
 
@@ -49,7 +56,7 @@ MongoDB is available in community and commercial versions through vendor MongoDB
 \cite{S174228761630031720160601}
 \bibliographystyle{plain}
 \section {Redis DB}
-Redis (REmote DIctionary Server) is an open source (BSD licensed), in-memory data structure store, used as a database. It supports a large variety of different types of data that can be stored ranging from strings and lists to hashes and sorted sets.Redis allows you to run atomic operations on these types, like appending a string; increment the value in a hash; pushing an element to a list; computing set intersection, union and difference; or getting the member with highest ranking in a sorted set.
+Redis (REmote DIctionary Server) is an open source (BSD licensed), in-memory data structure store, used as a database. It supports a large variety of different types of data that can be stored ranging from strings and lists to hashes and sorted sets. Redis allows you to run atomic operations on these types, like appending a string, increment the value in a hash, pushing an element to a list, computing set intersection, union and difference or getting the member with highest ranking in a sorted set.
 \newline
 
 Key features of redis are:\newline
@@ -80,7 +87,10 @@ Amazon Web Services (AWS), the pioneering cloud computing platform provided by A
 Publicly launched on March 19, 2006, AWS offered Simple Storage Service (S3) and Elastic Compute Cloud (EC2). By 2009, S3 and EC2 were launched in Europe, the Elastic Block Store (EBS) was made public, and a powerful content delivery network (CDN), Amazon CloudFront, all became formal parts of AWS offering. These developer-friendly services attracted cloud-ready customers and set the table for formalized partnerships with data-hungry enterprises such as Dropbox, Netflix, and Reddit, all before 2010.\newline
 
 \section {Docker}
-Docker is an open platform for developing, shipping, and running applications. Docker enables you to separate your applications from your infrastructure so you can deliver software quickly. With Docker, you can manage your infrastructure in the same ways you manage your applications. Docker provides the ability to package and run an application in a loosely isolated environment called a container. The isolation and security allow you to run many containers simultaneously on a given host. Containers are lightweight because they don’t need the extra load of a hypervisor, but run directly within the host machine’s kernel. This means you can run more containers on a given hardware combination than if you were using virtual machines. You can even run Docker containers within host machines that are actually virtual machines.
+Docker is an open platform for developing, shipping, and running applications. Docker enables you to separate your applications from your infrastructure so you can deliver software quickly. Docker provides the ability to package and run an application in a loosely isolated environment called a container. The isolation and security allow you to run many containers simultaneously on a given host.
+\newline
+
+Containers are lightweight because they don’t need the extra load of a hypervisor, but run directly within the host machine’s kernel. This means you can run more containers on a given hardware combination than if you were using virtual machines. You can even run Docker containers within host machines that are actually virtual machines.
 
 \section {JSON}
 JSON stands for Java Script Object Notation. JSON is a lightweight format for the storing of and transporting of data. JSON is a text format language that is completely language independent. JSON is used mainly to transfer data between a server and web or mobile applications. 
