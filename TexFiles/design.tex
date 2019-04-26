@@ -12,7 +12,7 @@ The game will be a kart racing game, with desktop players using a kart while the
 \newline
 
 The game will have a procedural track created as the game starts. This track is created on the hosts machine and is shared with the players who have joined. Controls for the desktop will be:
-W for forward, A for left, D for right, Spacebar to jump and R to respawn 
+W for forward, A for left, D for right, Spacebar to jump and R to respawn.
 VR controls will be A to jump and B to respawn.
 \newline
 
@@ -72,7 +72,10 @@ For our implementation of the game, we used the A button to jump, the B button t
 We were able to implement these features using the Oculus SDK. Some of the issues that had presented during the project were usually to do with the hardware rather than software. For instance the left earphone on the headset was damaged and had to be returned to Oculus which took two months for it to be returned.\newline
 
 \section{Procedural Track}
-A decision was made to generate the race tracks in a procedural manner to keep consistency throughout the different platforms of the game. This would guarantee each player who joins or hosts a game would be racing on an identical track to everyone else who is playing either on desktop or VR. This also reduced the need to create multiple tracks as the tracks that are generated are different for each race. This was a good decision on our behalf as the original plan was to create the race track on desktop and then recreate it in VR. This would have been a very time consuming and troublesome process. 
+A decision was made to generate the race tracks in a procedural manner to keep consistency throughout the different platforms of the game. This would guarantee each player who joins or hosts a game would be racing on an identical track to everyone else who is playing either on desktop or VR. This also reduced the need to create multiple tracks as the tracks that are generated are different for each race. This was a good decision on our behalf as the original plan was to create the race track on desktop and then recreate it in VR. This would have been a very time consuming and troublesome process.\newline
+
+Originally we had mathematically generated this track, however a mistake was made that sometimes caused a bug were the track would generate a piece out of line on the track. So the approach was changed. Instead of mathematically calculating where each piece should appear, we created a set of track pieces, for example, one straight road piece and a left and right turn. Then some pieces that allow the track to descend or ascend. Each prefab for the track has two markers, one marker at the starting position. Then another marker at an ending position, which is the point where the next piece should join on to the current piece. So when the program creates the track, it slots the road pieces together like lego. Generate one piece at point 0,0. Then randomly pick the next track piece and place its starting marker and the ending marker of the previous piece.\newline
+
 \includegraphics[width=1\columnwidth]{img/ProceduralTrack1.PNG}
 
 
